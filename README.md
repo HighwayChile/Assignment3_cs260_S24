@@ -2,28 +2,22 @@
 CS260 assignment 3 (linked queue)  
 
 
-# Assignment  
-Assignment 3 (Linked Queue):  
+# Reflection  
+My original design for my linked list was overly simple, and I forgot about the structure of linked lists. 
+I also thought the point of the assignment would be to force a stack overflow, which would have been good for the 
+extra credit portion(which I did not get to).  
+My main flaw in the design was to assume I needed to shift the values in the array, because I had forgotten the nature 
+of linked lists and nodes.  
+I ended up using a C code I had written in the Fall of 2023 as the basis for my code design, but after cross referencing with 
+examples on the internet, including geeksforgeeks, stackoverflow, chatGPT, and at least one other site (https://www.codesdope.com/blog/article/c-linked-lists-in-c-singly-linked-list/), I realized my original code in C was incredibly complex, and sometimes convoluted. Luckily the bare bones of the logic was sound and it also reminded me of exactly how the node/pointer interaction works.  
+I used the basic pointer logic that we had practiced in CS133C to build my linked list. This was originally learned using all of the same tools, but different pages, because that was all in C.
+One thing I saw in my research of linked lists and classes in C++ is the use of the public and private keywords (access specifiers). I am reading their purpose on w3schools and I see that they work almost like the "external" command in C. They allow access to the inner attributes from an outside classe. So they are exactly what they sound like!  
 
-    Based on what we know about linked lists, stacks, and queues, design a linked queue (a queue using a linked-list to store the data in the structure)  
+P.S. Apologies for the same menu design! My brain needs a user interface! I think my favorite method of testing is manual testing.  
+P.P.S If I have any all caps comments, those are meant for me lol. I meant to delete that!  
 
-    Design, implement, and test a Queue data structure that:  
-
-        uses a linked-list to store values in the queue  
-
-        has an enqueue method that will appropriately add a value to the back of the queue as an appropriate element  
-
-        has a dequeue method that will appropriately remove an element from the front of the queue and return its value  
-
-        Optionally has a peek method that returns the value at the front of the queue without removing it
-        Bonus if you also create an array based Queue!  
-
-    Tests: Be sure to include at least one test for each piece of functionality that should verify that your code is working!  
-
-    Be sure to commit changes regularly to your git repo  
-
-    Once you have implemented and tested your code, add to the README file what line(s) of code or inputs and outputs show your work meeting each of the above requirements (or better, include a small screen snip of where it meets the requirement!).  
-
-    Remember to submit a link to this project in Moodle to remind us to grade it!  
-
-Note: This assignment is partly to get you some practice with basic pointers if you have not used them much, to get you thinking about dynamically sizing containers, and to think about what might be efficient and what might be able to be improved.  
+*references  
+https://www.codesdope.com/blog/article/c-linked-lists-in-c-singly-linked-list/  
+https://www.geeksforgeeks.org/program-to-implement-singly-linked-list-in-c-using-class/#  
+https://stackoverflow.com/questions/14544539/linked-lists-in-c  
+chatGPT  
