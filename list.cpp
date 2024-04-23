@@ -15,14 +15,23 @@ void show_menu(void) {
     "5. Quit \n"  << endl;
 }
 
+// case 1
+void display() {
+    stack_item* temp = head;
+    while (temp != nullptr) {
+    std::cout << temp->data << " ";
+    temp = temp->next;
+    }
+    std::cout << std::endl;
+}
+
+
 // case 2
 void push(int value) {
     stack_item* new_item = new stack_item(value);
     new_item->next = head;
     head = new_item;
 }
-
-
 
 
 // case 3
@@ -32,15 +41,6 @@ void pop() {
         head = head->next;
         delete temp;
     }
-}
-
-void display() {
-    stack_item* temp = head;
-    while (temp != nullptr) {
-    std::cout << temp->data << " ";
-    temp = temp->next;
-    }
-    std::cout << std::endl;
 }
 
 
