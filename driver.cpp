@@ -11,9 +11,9 @@ int main() {
     // intro
     cout << "Stack stuff &" << endl;
     cout << "Linked list stuff" << endl;
+    cout << "\nThis linked list takes a struct and makes a new node each time you tell it to queue" << endl;
 
     while (true) {
-        // stack_item *head;
         int menu1;
         int menu_start = 1;
         int menu_end = 5;
@@ -25,25 +25,29 @@ int main() {
         if (cin >> menu1 && menu1 >= menu_start && menu1 <= menu_end) {
             switch (menu1) {
             case 1:
-                cout << "Current stack: ";
-                display();
-                break;
-            case 2:
                 int value;
                 cout << "Enter value to add: ";
                 cin >> value;
                 push(value);
                 break;
+            case 2:
+                cout << "Removing item from bottom..." << endl;
+                pop_bottom();
+                break;
             case 3:
-                cout << "Removing item from top" << endl;
+                cout << "Removing item from top..." << endl;
                 pop();
                 break;
             case 4:
-                cout << "Clearing stack" << endl;
-                delete_all();
+                cout << "Current queue: ";
+                display();
                 break;
             case 5:
-                cout << "Quitting" << endl;
+                cout << "Clearing queue..." << endl;
+                delete_all();
+                break;
+            case 6:
+                cout << "Quitting..." << endl;
                 system("pause");
                 return 0;
             default:

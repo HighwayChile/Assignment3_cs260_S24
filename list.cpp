@@ -1,6 +1,5 @@
 #include <iostream>
 #include "list.h"
-// #include "driver.cpp"
 
 using namespace std;
 
@@ -8,14 +7,15 @@ stack_item* head = nullptr;
 
 void show_menu(void) {
     cout << "What would you like to do? \n"
-    "1. Inspect stack \n"
-    "2. Add item to top\n"
-    "3. Remove item from bottom \n"
-    "4. Clear Stack \n"
-    "5. Quit \n"  << endl;
+    "1. Enqueue item \n"
+    "2. Dequeue item \n"
+    "3. Remove item from top\n"
+    "4. Display queue\n"
+    "5. Clear queue \n"
+    "6. Quit \n"  << endl;
 }
 
-// case 1
+// case 4
 void display() {
     stack_item* temp = head;
     while (temp != nullptr) {
@@ -25,14 +25,12 @@ void display() {
     std::cout << std::endl;
 }
 
-
-// case 2
+// case 1
 void push(int value) {
     stack_item* new_item = new stack_item(value);
     new_item->next = head;
     head = new_item;
 }
-
 
 // case 3
 void pop() {
@@ -43,8 +41,27 @@ void pop() {
     }
 }
 
+// case 2
+void pop_bottom() {
+    // if the list is empty or has only one node, just do normal pop
+    if (head== nullptr || head->next == nullptr) {
+        pop();
+        return;
+    }
+    
+    // traverse list to find the penultimate node
+    stack_item* prev = head;
+    while (prev->next->next != nullptr) {
+        prev = prev->next;
+    }
 
-// case 4
+    // remove the last node
+    stack_item* last = prev->next;
+    prev->next = nullptr;
+    delete last;
+}
+
+// case 5
 void delete_all() {
     while (head != nullptr) {
         pop();
