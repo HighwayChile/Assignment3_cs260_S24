@@ -24,10 +24,10 @@ void display() {
     stack_item* temp = head;
     // if the temp pointer doesn't point at NULL, print the data that is being pointed to, then a space
     while (temp != nullptr) {
-    cout << temp->data << " ";
-    // temp shifts to pointing at next node
-    temp = temp->next;
-    }
+        cout << temp->data << " ";
+        // temp shifts to pointing at next node
+        temp = temp->next;
+        }
     // endline
     cout << endl;
 }
